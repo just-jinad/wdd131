@@ -1,0 +1,227 @@
+/* ==========================================================================
+   WDD 131 Landing Page — base.css
+   Design tokens: adire (indigo-resist textile) palette + dev-utility mono
+   ========================================================================== */
+
+:root {
+  /* Color tokens */
+  --color-indigo: #21243D;      /* adire dye — headers, footer, dark surfaces */
+  --color-indigo-soft: #2B2F52; /* secondary dark surface */
+  --color-paper: #F5F1E8;       /* unbleached cotton — page background */
+  --color-ink: #24252B;         /* body text */
+  --color-gold: #C9982B;        /* wax-resist accent — links, highlights */
+  --color-teal: #2F6F63;        /* secondary accent — code/dev nod */
+  --color-border: #E4DAC4;
+
+  /* Type tokens */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Source Serif 4", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Layout */
+  --max-width: 900px;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-teal);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header {
+  background-color: var(--color-indigo);
+  color: var(--color-paper);
+  padding: 1.5rem 1rem 0;
+}
+
+#course-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.02em;
+  padding-bottom: 1.25rem;
+}
+
+/* Signature element: adire diamond rule under the title */
+header::after {
+  content: "";
+  display: block;
+  height: 6px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-gold) 0 6px,
+    transparent 6px 12px
+  );
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding: 1rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+nav a {
+  color: var(--color-paper);
+  position: relative;
+  padding: 0.25rem 0.1rem;
+}
+
+/* Hover affect: terminal-style prompt reveal + underline grow from center */
+nav a::before {
+  content: ">";
+  color: var(--color-gold);
+  margin-right: 0.35rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-gold);
+  transition: all 0.25s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--color-gold);
+}
+
+nav a:hover::before,
+nav a:focus-visible::before {
+  opacity: 1;
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Main
+   ========================================================================== */
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3rem;
+}
+
+main > h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-indigo);
+  margin-bottom: 0.25rem;
+}
+
+main > h1::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  background-color: var(--color-gold);
+  margin: 0.75rem 0 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.card h2 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--color-indigo);
+  margin-top: 0;
+}
+
+.card .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-teal);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+  background-color: var(--color-indigo);
+  color: var(--color-paper);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+footer p {
+  margin: 0.35rem 0;
+}
+
+/* ==========================================================================
+   Accessibility: reduced motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  nav a,
+  nav a::before,
+  nav a::after {
+    transition: none;
+  }
+}

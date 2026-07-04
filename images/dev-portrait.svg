@@ -1,0 +1,26 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="devTitle devDesc">
+  <title id="devTitle">Illustration of a developer workspace</title>
+  <desc id="devDesc">A laptop displaying code brackets, set against an indigo adire-inspired diamond pattern.</desc>
+  <defs>
+    <pattern id="adireGrid" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="28" height="28" fill="#21243D"/>
+      <path d="M14 0 L28 14 L14 28 L0 14 Z" fill="#2B2F52"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="300" fill="url(#adireGrid)"/>
+  <rect x="0" y="0" width="400" height="300" fill="#21243D" opacity="0.35"/>
+
+  <!-- laptop base -->
+  <rect x="90" y="190" width="220" height="14" rx="4" fill="#C9982B"/>
+  <rect x="70" y="196" width="260" height="8" rx="4" fill="#8a6a1f"/>
+
+  <!-- laptop screen -->
+  <rect x="120" y="70" width="160" height="120" rx="8" fill="#F5F1E8"/>
+  <rect x="132" y="82" width="136" height="96" rx="4" fill="#1B1D2B"/>
+
+  <!-- code brackets -->
+  <text x="200" y="140" font-family="'JetBrains Mono', monospace" font-size="42" fill="#2F6F63" text-anchor="middle">&lt;/&gt;</text>
+
+  <!-- cursor blink dot -->
+  <circle cx="248" cy="160" r="4" fill="#C9982B"/>
+</svg>

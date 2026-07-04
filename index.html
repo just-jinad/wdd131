@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 131 – Dynamic Web Fundamentals – Tope Jinad</title>
+  <meta
+    name="description"
+    content="WDD 131 – Dynamic Web Fundamentals course landing page by Tope Jinad, full-stack developer covering Java, C, and JavaScript DOM fundamentals."
+  />
+  <meta name="author" content="Tope Jinad" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles/base.css" />
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    
+  <header>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <nav>
+      <a href="https://www.linkedin.com/in/topejinad/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a>
+      <a
+        href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37?lang=eng&id=p6#p6"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Favorite Scripture</a>
+      <a href="#">Final Project (Coming Soon)</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Tope Jinad</h1>
+
+    <div class="card-grid">
+      <section class="card">
+        <img
+          src="images/dev-portrait.svg"
+          alt="Illustration of a laptop displaying code brackets against an indigo pattern"
+          width="400"
+          height="300"
+        />
+        <div class="card-body">
+          <span class="eyebrow">About Me</span>
+          <h2>Full-Stack Developer, Ogbomosho</h2>
+          <p>
+            I build and support web systems day to day — from customer support
+            on an ERP platform to freelance builds for nonprofits under my own
+            studio, justjinad. I also teach Java and C programming, so I spend
+            as much time explaining code as writing it.
+          </p>
+        </div>
+      </section>
+
+      <section class="card">
+        <img
+          src="images/course-path.svg"
+          alt="Illustration of a route connecting a location marker to a browser window"
+          width="400"
+          height="300"
+        />
+        <div class="card-body">
+          <span class="eyebrow">Why WDD 131</span>
+          <h2>Filling the Gap Between Backend and Browser</h2>
+          <p>
+            Most of my work lives in Java, C, and server-side logic. WDD 131
+            is where I formalize the front-end fundamentals — semantic HTML,
+            CSS layout systems, and the DOM — that tie directly into the
+            Next.js and WordPress client work I already do.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Tope Jinad, Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>

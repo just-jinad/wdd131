@@ -1,0 +1,27 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pathTitle pathDesc">
+  <title id="pathTitle">Illustration of a learning path from Lagos to a global classroom</title>
+  <desc id="pathDesc">A dotted route connecting a location marker to a browser window, representing remote study.</desc>
+  <defs>
+    <pattern id="adireGrid2" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="28" height="28" fill="#F5F1E8"/>
+      <path d="M14 0 L28 14 L14 28 L0 14 Z" fill="#ECE4D2"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="300" fill="url(#adireGrid2)"/>
+
+  <!-- route -->
+  <path d="M60 230 Q160 120 340 90" fill="none" stroke="#2F6F63" stroke-width="3" stroke-dasharray="6 8"/>
+
+  <!-- location marker -->
+  <circle cx="60" cy="230" r="10" fill="#C9982B"/>
+  <path d="M60 218 a12 12 0 0 1 0 24 a12 12 0 0 1 0 -24" fill="none" stroke="#C9982B" stroke-width="2"/>
+
+  <!-- browser window -->
+  <rect x="270" y="55" width="110" height="80" rx="6" fill="#21243D"/>
+  <rect x="270" y="55" width="110" height="16" rx="6" fill="#2B2F52"/>
+  <circle cx="280" cy="63" r="3" fill="#C9982B"/>
+  <circle cx="290" cy="63" r="3" fill="#F5F1E8"/>
+  <rect x="278" y="82" width="94" height="6" rx="2" fill="#F5F1E8"/>
+  <rect x="278" y="94" width="70" height="6" rx="2" fill="#2F6F63"/>
+  <rect x="278" y="106" width="86" height="6" rx="2" fill="#F5F1E8" opacity="0.6"/>
+</svg>
