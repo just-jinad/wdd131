@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Temple Album — larger viewport overrides (>=700px)
+   Loaded conditionally via <link media="screen and (min-width: 700px)">
+   in temples.html, so mobile devices never fetch this file.
+   ========================================================================== */
+
+.site-header {
+  padding: 1.1rem 2.5rem;
+}
+
+.brand {
+  font-size: 1.75rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.primary-nav {
+  display: flex;
+  flex-direction: row;
+  position: static;
+  background: none;
+  border-bottom: none;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.primary-nav a {
+  border-left: none;
+  border-bottom: 3px solid transparent;
+  padding: 0.4rem 0.9rem;
+}
+
+.primary-nav a:hover {
+  border-left-color: transparent;
+  border-bottom-color: var(--gold);
+}
+
+main {
+  padding: 3rem 2.5rem 4rem;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.gallery {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}

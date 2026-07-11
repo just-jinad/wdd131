@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album</title>
+  <meta name="description" content="A responsive photo album of temples, built with mobile-first HTML, CSS, and JavaScript.">
+  <meta name="author" content="Tope Jinad">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 700px)">
+
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <p class="brand">Temple Album</p>
+
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="hamburger-icon">&#9776;</span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav">
+      <a href="temples.html">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <div class="gallery">
+      <figure>
+        <img src="images/aba_nigeria_temple_lds.jpeg" alt="Illustration representing the San Diego California Temple" width="400" height="300" loading="lazy">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/bern_switzerland_temple_lds.jpeg" alt="Illustration representing the Salt Lake Temple" width="400" height="300" loading="lazy">
+        <figcaption>Salt Lake City Utah</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/billings_temple_lds.jpeg" alt="Illustration representing the Provo City Center Temple" width="400" height="300" loading="lazy">
+        <figcaption>Provo City Center Utah</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/bismarck_temple_lds.jpeg" alt="Illustration representing the Mesa Arizona Temple" width="400" height="300" loading="lazy">
+        <figcaption>Mesa Arizona</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/boston_temple_lds.jpeg" alt="Illustration representing the Washington D.C. Temple" width="400" height="300" loading="lazy">
+        <figcaption>Washington D.C.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/bountiful_utah_temple_sunset.jpeg" alt="Illustration representing the Laie Hawaii Temple" width="400" height="300" loading="lazy">
+        <figcaption>Laie Hawaii</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/brigham_city_temple_lds.jpeg" alt="Illustration representing the Manti Utah Temple" width="400" height="300" loading="lazy">
+        <figcaption>Manti Utah</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/cochabamba_bolivia_temple_lds.jpeg" alt="Illustration representing the Cardston Alberta Temple" width="400" height="300" loading="lazy">
+        <figcaption>Cardston Alberta</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/rendering_abidjan_ivory_coast_temple.jpeg" alt="Illustration representing the Freiberg Germany Temple" width="400" height="300" loading="lazy">
+        <figcaption>Freiberg Germany</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentYear"></span> Tope Jinad | Ogbomosho, Oyo State, Nigeria</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+</body>
+</html>
