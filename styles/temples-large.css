@@ -1,52 +1,59 @@
 /* ==========================================================================
    Temple Album — larger viewport overrides (>=700px)
-   Loaded conditionally via <link media="screen and (min-width: 700px)">
-   in temples.html, so mobile devices never fetch this file.
+   Gated twice, deliberately: the <link media="..."> attribute in temples.html
+   keeps mobile devices from ever fetching this file, and the @media block
+   below scopes every rule so this file is also correct if read/parsed on
+   its own (avoids "bare duplicate selector" false positives from linters
+   that don't account for link-level media gating).
    ========================================================================== */
 
-.site-header {
-  padding: 1.1rem 2.5rem;
-}
+@media screen and (min-width: 700px) {
 
-.brand {
-  font-size: 1.75rem;
-}
+  .site-header {
+    padding: 1.1rem 2.5rem;
+  }
 
-.hamburger {
-  display: none;
-}
+  .brand {
+    font-size: 1.75rem;
+  }
 
-.primary-nav {
-  display: flex;
-  flex-direction: row;
-  position: static;
-  background: none;
-  border-bottom: none;
-  padding: 0;
-  gap: 0.5rem;
-}
+  .hamburger {
+    display: none;
+  }
 
-.primary-nav a {
-  border-left: none;
-  border-bottom: 3px solid transparent;
-  padding: 0.4rem 0.9rem;
-}
+  .primary-nav {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    border-bottom: none;
+    padding: 0;
+    gap: 0.5rem;
+  }
 
-.primary-nav a:hover {
-  border-left-color: transparent;
-  border-bottom-color: var(--gold);
-}
+  .primary-nav a {
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    padding: 0.4rem 0.9rem;
+  }
 
-main {
-  padding: 3rem 2.5rem 4rem;
-}
+  .primary-nav a:hover {
+    border-left-color: transparent;
+    border-bottom-color: var(--gold);
+  }
 
-main h1 {
-  font-size: 2.5rem;
-  margin-bottom: 2.5rem;
-}
+  main {
+    padding: 3rem 2.5rem 4rem;
+  }
 
-.gallery {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
+  main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+
 }

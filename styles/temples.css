@@ -10,7 +10,8 @@
   --indigo-mid: #232C52;
   --ivory: #FBF8F1;
   --ivory-shade: #E7E1D2;
-  --gold: #C9A227;
+  --gold: #C9A227;        /* on-dark accent: nav hover, footer, spire glow */
+  --gold-deep: #7A5D18;   /* on-light text: passes WCAG AA (5.81:1) on ivory */
   --twilight: #8892AC;
   --text-dark: #22264A;
 
@@ -63,7 +64,9 @@ a {
 }
 
 .hamburger {
-  background: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
   border: 1px solid var(--gold);
   border-radius: 4px;
   color: var(--ivory);
@@ -148,7 +151,7 @@ main h1 {
   font-size: 0.85rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-deep);
   font-weight: 500;
 }
 
