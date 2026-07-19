@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nigeria | Place Profile</title>
+  <meta name="description" content="A snapshot of Nigeria: key country data and current weather conditions." />
+
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Nigeria</h1>
+  </header>
+
+  <div class="pattern-band" aria-hidden="true"></div>
+
+  <main>
+    <figure class="hero">
+      <picture>
+        <img
+          src="https://images.unsplash.com/photo-1569706971306-de5d78f6418e?fm=webp&q=80&w=800&fit=crop"
+          srcset="
+            https://images.unsplash.com/photo-1569706971306-de5d78f6418e?fm=webp&q=80&w=480&fit=crop  480w,
+            https://images.unsplash.com/photo-1569706971306-de5d78f6418e?fm=webp&q=80&w=800&fit=crop  800w,
+            https://images.unsplash.com/photo-1569706971306-de5d78f6418e?fm=webp&q=80&w=1200&fit=crop 1200w,
+            https://images.unsplash.com/photo-1569706971306-de5d78f6418e?fm=webp&q=80&w=1600&fit=crop 1600w"
+          sizes="100vw"
+          alt="Aerial view of Lagos, Nigeria's largest city, showing dense urban waterfront development"
+          class="hero-img"
+          width="1600"
+          height="1000"
+        />
+      </picture>
+
+      <section class="card data-card">
+        <h2>Data</h2>
+        <dl>
+          <div class="row"><dt>Area:</dt><dd>923,768 sq km</dd></div>
+          <div class="row"><dt>Population:</dt><dd>223,800,000</dd></div>
+          <div class="row"><dt>Capital:</dt><dd>Abuja</dd></div>
+          <div class="row"><dt>Languages:</dt><dd>English, Hausa, Yoruba, Igbo</dd></div>
+          <div class="row"><dt>Currency:</dt><dd>Nigerian Naira (₦)</dd></div>
+          <div class="row"><dt>Time Zone:</dt><dd>WAT (UTC+1)</dd></div>
+        </dl>
+      </section>
+
+      <section class="card weather-card">
+        <h2>Weather</h2>
+        <img src="images/weather-sunny.svg" alt="Sunny weather icon" class="weather-icon-mobile" width="64" height="64" />
+        <dl>
+          <div class="row"><dt>Temperature:</dt><dd>31 &deg;C</dd></div>
+          <div class="row"><dt>Conditions:</dt><dd>Sunny</dd></div>
+          <div class="row"><dt>Wind:</dt><dd>12 km/h</dd></div>
+          <div class="row"><dt>Wind Chill:</dt><dd id="wind-chill">Calculating&hellip;</dd></div>
+        </dl>
+      </section>
+    </figure>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Tope Jinad &bull; Nigeria</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
+
+</body>
+</html>
