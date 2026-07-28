@@ -1,10 +1,3 @@
-// ==========================================================================
-// Temple Album — filtered rendering
-//
-// Design: data -> filter predicate -> render. Each layer is independently
-// testable — a junior can swap the DOM-building step for something else
-// (say, a template engine) without touching the filter logic, and vice versa.
-// ==========================================================================
 
 const temples = [
   {
@@ -70,7 +63,7 @@ const temples = [
     dedicated: "1877, April, 6",
     area: 119619,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/st-george-utah/400x250/st-george-utah-temple-exterior.jpg",
+      "https://churchofjesuschristtemples.org/assets/img/temples/st.-george-utah-temple/st.-george-utah-temple-40435-main.jpg",
   },
   {
     templeName: "Philadelphia Pennsylvania",
@@ -78,7 +71,7 @@ const temples = [
     dedicated: "2016, September, 18",
     area: 60000,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/philadelphia-pennsylvania/400x250/philadelphia-pennsylvania-temple-exterior.jpg",
+      "https://churchofjesuschristtemples.org/assets/img/temples/philadelphia-pennsylvania-temple/philadelphia-pennsylvania-temple-3351-main.jpg",
   },
   {
     templeName: "Cardston Alberta",
@@ -86,13 +79,12 @@ const temples = [
     dedicated: "1923, August, 26",
     area: 60000,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/cardston-alberta/400x250/cardston-alberta-temple-exterior.jpg",
+      "https://churchofjesuschristtemples.org/assets/img/temples/cardston-alberta-temple/cardston-alberta-temple-13287-main.jpg",
   },
 ];
 
-// ---------- Filter predicates ----------
-// Pure functions: (temple) -> boolean. No DOM, no side effects — this is
-// the part you'd unit test in isolation.
+
+
 const dedicatedYear = (temple) => parseInt(temple.dedicated.split(",")[0], 10);
 
 const filters = {
@@ -111,13 +103,19 @@ const pageHeadings = {
   small: "Small",
 };
 
-// ---------- Rendering ----------
+
 const gallery = document.getElementById("gallery");
 const pageHeading = document.getElementById("pageHeading");
 
 function templeCardHTML(temple) {
   return `
-    <figure class="temple-card">
+    <article class="temple-card">
+      <div class="temple-info">
+        <h2 class="temple-name">${temple.templeName}</h2>
+        <p><span class="label">Location:</span> ${temple.location}</p>
+        <p><span class="label">Dedicated:</span> ${temple.dedicated}</p>
+        <p><span class="label">Size:</span> ${temple.area.toLocaleString()} sq ft</p>
+      </div>
       <img
         src="${temple.imageUrl}"
         alt="${temple.templeName} Temple"
@@ -125,18 +123,7 @@ function templeCardHTML(temple) {
         height="300"
         loading="lazy"
       >
-      <figcaption>
-        <p class="temple-name">${temple.templeName}</p>
-        <dl>
-          <dt>Location</dt>
-          <dd>${temple.location}</dd>
-          <dt>Dedicated</dt>
-          <dd>${temple.dedicated}</dd>
-          <dt>Area</dt>
-          <dd>${temple.area.toLocaleString()} sq ft</dd>
-        </dl>
-      </figcaption>
-    </figure>
+    </article>
   `;
 }
 
@@ -168,7 +155,7 @@ primaryNav.addEventListener("click", (event) => {
 
   renderTemples(link.dataset.filter);
 
-  
+
   if (primaryNav.classList.contains("is-open")) {
     primaryNav.classList.remove("is-open");
     hamburger.setAttribute("aria-expanded", "false");
@@ -177,7 +164,7 @@ primaryNav.addEventListener("click", (event) => {
   }
 });
 
-// ---------- Hamburger menu toggle ----------
+
 hamburger.addEventListener("click", () => {
   const isOpen = primaryNav.classList.toggle("is-open");
 
@@ -187,11 +174,12 @@ hamburger.addEventListener("click", () => {
     isOpen ? "Close navigation menu" : "Open navigation menu"
   );
   hamburger.querySelector(".hamburger-icon").innerHTML = isOpen
-    ? "&#10005;" // X
-    : "&#9776;"; // hamburger lines
+    ? "&#10005;" 
+    : "&#9776;"; 
 });
 
 document.getElementById("currentYear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
+
 
 renderTemples("home");

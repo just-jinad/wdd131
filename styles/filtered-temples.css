@@ -159,47 +159,43 @@ main h1 {
 .temple-card {
   margin: 0;
   background-color: var(--ivory);
-  padding: 0.75rem 0.75rem 1rem;
-  border-radius: 2px;
+  border-radius: 6px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  overflow: hidden; /* clips the image's bottom corners to match the card radius */
+}
+
+/* Text sits in its own padded wrapper so the image below can go edge-to-edge */
+.temple-card .temple-info {
+  padding: 1rem 1rem 0.85rem;
+  text-align: center;
+}
+
+.temple-card .temple-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 0.5rem;
+}
+
+.temple-card .temple-info p {
+  margin: 0.25rem 0;
+  font-size: 0.85rem;
+  color: var(--text-dark);
+}
+
+.temple-card .label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--gold-deep);
 }
 
 .temple-card img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-}
-
-.temple-card figcaption {
-  margin-top: 0.6rem;
-}
-
-.temple-card .temple-name {
-  text-align: center;
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin: 0 0 0.35rem;
-}
-
-.temple-card dl {
-  margin: 0;
-  font-size: 0.8rem;
-  color: var(--gold-deep);
-}
-
-.temple-card dt {
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 0.7rem;
-  opacity: 0.85;
-}
-
-.temple-card dd {
-  margin: 0 0 0.5rem;
-  color: var(--text-dark);
 }
 
 /* ---------- Footer ---------- */
