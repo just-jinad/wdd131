@@ -1,0 +1,225 @@
+/* ==========================================================================
+   Temple Album (Filtered) — mobile-first base styles
+   Reuses the indigo/gold/ivory system from temples.css. Only new rules here
+   are the .temple-card component and .primary-nav[aria-current] state —
+   everything else is copied verbatim to keep the two pages visually
+   consistent (see temples-large.css for the >=700px overrides).
+   ========================================================================== */
+
+:root {
+  --indigo-dark: #141A31;
+  --indigo: #1B2340;
+  --indigo-mid: #232C52;
+  --ivory: #FBF8F1;
+  --ivory-shade: #E7E1D2;
+  --gold: #C9A227;        /* on-dark accent: nav hover, footer, spire glow */
+  --gold-deep: #7A5D18;   /* on-light text: passes WCAG AA (5.81:1) on ivory */
+  --twilight: #8892AC;
+  --text-dark: #22264A;
+
+  --font-display: "Cormorant Garamond", "Georgia", serif;
+  --font-body: "Jost", "Segoe UI", sans-serif;
+
+  --gap: 1.25rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--indigo-dark);
+  color: var(--text-dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  background-color: var(--indigo);
+  color: var(--ivory);
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gold);
+  position: relative;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.hamburger {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  color: var(--ivory);
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
+
+.primary-nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--indigo);
+  border-bottom: 1px solid var(--gold);
+  padding: 0.5rem 0;
+  z-index: 10;
+}
+
+.primary-nav.is-open {
+  display: flex;
+}
+
+.primary-nav a {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-left: 3px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.primary-nav a:hover {
+  color: var(--gold);
+  border-left-color: var(--gold);
+}
+
+.hamburger:focus-visible,
+.primary-nav a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Active filter indicator — set via aria-current="page" in JS, not a class,
+   so assistive tech gets the state for free. */
+.primary-nav a[aria-current="page"] {
+  color: var(--gold);
+  border-left-color: var(--gold);
+}
+
+/* ---------- Main / gallery ---------- */
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+  background-color: var(--indigo-dark);
+  min-height: 60vh; /* prevents footer jump when a filter returns 0 cards */
+}
+
+main h1 {
+  font-family: var(--font-display);
+  color: var(--ivory);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 1.75rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+}
+
+.gallery p.empty-state {
+  color: var(--twilight);
+  text-align: center;
+  font-style: italic;
+  grid-column: 1 / -1;
+}
+
+/* ---------- Temple card ---------- */
+
+.temple-card {
+  margin: 0;
+  background-color: var(--ivory);
+  padding: 0.75rem 0.75rem 1rem;
+  border-radius: 2px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.temple-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.temple-card figcaption {
+  margin-top: 0.6rem;
+}
+
+.temple-card .temple-name {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 0.35rem;
+}
+
+.temple-card dl {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--gold-deep);
+}
+
+.temple-card dt {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.7rem;
+  opacity: 0.85;
+}
+
+.temple-card dd {
+  margin: 0 0 0.5rem;
+  color: var(--text-dark);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background-color: var(--indigo);
+  color: var(--twilight);
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 1.25rem;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+/* ---------- Accessibility ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .primary-nav a {
+    transition: none;
+  }
+}
