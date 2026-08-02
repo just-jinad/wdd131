@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Review — Submit</title>
+  <meta name="description" content="Submit a product review: rating, installation date, useful features, and written feedback." />
+  <meta name="author" content="Tope Jinad">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="eyebrow">Field Notes / Review Intake</p>
+      <h1>Log a Product Review</h1>
+    </div>
+  </header>
+
+  <main class="page">
+    <form class="ticket" action="review.html" method="get" novalidate>
+
+      <!-- Product Name -->
+      <div class="field">
+        <label for="productName">Product name</label>
+        <select id="productName" name="productName" required>
+          <option value="" disabled selected>Select a Product ...</option>
+        </select>
+      </div>
+
+      <!-- Overall Rating -->
+      <fieldset class="field">
+        <legend>Overall rating</legend>
+
+        <div class="rating">
+          <input type="radio" id="rating5" name="rating" value="5" required />
+          <label for="rating5" title="5 stars">★</label>
+
+          <input type="radio" id="rating4" name="rating" value="4" />
+          <label for="rating4" title="4 stars">★</label>
+
+          <input type="radio" id="rating3" name="rating" value="3" />
+          <label for="rating3" title="3 stars">★</label>
+
+          <input type="radio" id="rating2" name="rating" value="2" />
+          <label for="rating2" title="2 stars">★</label>
+
+          <input type="radio" id="rating1" name="rating" value="1" />
+          <label for="rating1" title="1 star">★</label>
+        </div>
+      </fieldset>
+
+      <!-- Date of Installation -->
+      <div class="field">
+        <label for="installDate">Date of installation</label>
+        <input type="date" id="installDate" name="installDate" required />
+      </div>
+
+      <!-- Useful Features -->
+      <fieldset class="field">
+        <legend>Which features did you find useful? <span class="hint">(check all that apply)</span></legend>
+        <div class="checkbox-group">
+          <div class="checkbox-row">
+            <input type="checkbox" id="featureDurability" name="features" value="Durability" />
+            <label for="featureDurability">Durability</label>
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" id="featureEaseOfUse" name="features" value="Ease of Use" />
+            <label for="featureEaseOfUse">Ease of Use</label>
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" id="featurePerformance" name="features" value="Performance" />
+            <label for="featurePerformance">Performance</label>
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" id="featureDesign" name="features" value="Design" />
+            <label for="featureDesign">Design</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Written Review (optional) -->
+      <div class="field">
+        <label for="review">Written review <span class="hint">(optional)</span></label>
+        <textarea id="review" name="review" rows="5" placeholder="What worked, what didn't, and would you buy it again?"></textarea>
+      </div>
+
+      <!-- User Name (optional) -->
+      <div class="field">
+        <label for="userName">Your name <span class="hint">(optional)</span></label>
+        <input type="text" id="userName" name="userName" placeholder="Anonymous" />
+      </div>
+
+      <button type="submit" class="submit-btn">Post Review</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentYear"></span> Tope Jinad | Ogbomosho, Oyo State, Nigeria</p>
+    <p class="timestamp">Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Review — Confirmation</title>
+  <meta name="description" content="Confirmation page for a submitted product review." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="eyebrow">Field Notes / Review Intake</p>
+      <h1>Review Received</h1>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="ticket confirmation">
+      <p class="stamp">✓ Logged</p>
+
+      <div id="summary" class="summary" aria-live="polite">
+        <p class="empty-state">Review details will appear here after the form submits.</p>
+      </div>
+
+      <p class="counter">
+        Reviews logged this session: <strong id="reviewCount">0</strong>
+      </p>
+
+      <a href="form.html" class="submit-btn link-btn">Submit another review</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentYear"></span> Tope Jinad | Ogbomosho, Oyo State, Nigeria</p>
+    <p class="timestamp">Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/review.js"></script>
+  <script src="scripts/footer.js"></script>
+</body>
+</html>
