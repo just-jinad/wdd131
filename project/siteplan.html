@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Plan | Riverside Roasters</title>
+  <meta name="description" content="Website planning document for Riverside Roasters, a specialty coffee shop.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Riverside Roasters</h1>
+    <p class="tagline">Website Planning Document &mdash; WDD 131</p>
+  </header>
+
+  <nav class="plan-nav" aria-label="Site plan sections">
+    <ul>
+      <li><a href="#site-name">Site Name</a></li>
+      <li><a href="#site-purpose">Site Purpose</a></li>
+      <li><a href="#scenarios">Scenarios</a></li>
+      <li><a href="#color-schema">Color Schema</a></li>
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#wireframes">Wireframes</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="site-name" aria-labelledby="site-name-heading">
+      <h2 id="site-name-heading">Site Name</h2>
+      <p><strong>Riverside Roasters</strong></p>
+      <p>The name identifies the shop's location along the riverfront district and its
+        core product &mdash; small-batch roasted coffee. It reads as warm and local rather
+        than corporate, which matches the target audience of neighborhood regulars and
+        remote workers looking for a home base.</p>
+      <p class="meta-note">Optional domain availability: <code>riverside-roasters.com</code></p>
+    </section>
+
+    <section id="site-purpose" aria-labelledby="site-purpose-heading">
+      <h2 id="site-purpose-heading">Site Purpose</h2>
+      <p>The site gives current and prospective customers everything they need to decide
+        to visit, order ahead, or book the space for a small event:</p>
+      <ul>
+        <li>Full menu with prices and dietary/allergen notes.</li>
+        <li>Hours, location, and parking/transit information.</li>
+        <li>A contact and reservation form for private events and large group orders.</li>
+        <li>Loyalty rewards program sign-up.</li>
+      </ul>
+    </section>
+
+    <section id="scenarios" aria-labelledby="scenarios-heading">
+      <h2 id="scenarios-heading">Scenarios</h2>
+      <p>Representative questions a target-audience visitor would ask, used to drive
+        page content:</p>
+      <ol>
+        <li>What time does Riverside Roasters open on weekends, and do they take
+          reservations for small groups?</li>
+        <li>Does Riverside Roasters offer oat milk or other dairy-free options, and can
+          I see the full menu with prices online?</li>
+        <li>How do I sign up for the loyalty rewards program?</li>
+      </ol>
+    </section>
+
+    <section id="color-schema" aria-labelledby="color-schema-heading">
+      <h2 id="color-schema-heading">Color Schema</h2>
+      <p>This document is styled with the same palette selected for the final site:</p>
+      <ul class="swatch-list">
+        <li>
+          <span class="swatch swatch--brown" aria-hidden="true"></span>
+          <strong>Espresso Brown</strong> <code>#4A3428</code> &mdash; headings, body text,
+          footer background.
+        </li>
+        <li>
+          <span class="swatch swatch--cream" aria-hidden="true"></span>
+          <strong>Warm Cream</strong> <code>#F5EFE6</code> &mdash; page background, card
+          backgrounds.
+        </li>
+        <li>
+          <span class="swatch swatch--terracotta" aria-hidden="true"></span>
+          <strong>Terracotta</strong> <code>#C9713D</code> &mdash; buttons, links, active
+          nav state, accent borders.
+        </li>
+        <li>
+          <span class="swatch swatch--sage" aria-hidden="true"></span>
+          <strong>Sage Green</strong> <code>#6B7C59</code> &mdash; secondary accents, form
+          focus states, small icons.
+        </li>
+      </ul>
+    </section>
+
+    <section id="typography" aria-labelledby="typography-heading">
+      <h2 id="typography-heading">Typography</h2>
+      <p>Two typefaces keep the page readable while giving headings some character:</p>
+      <ul>
+        <li>
+          <span class="font-sample font-sample--heading">Poppins (700/600)</span>
+          &mdash; used for all headings (<code>h1</code>&ndash;<code>h3</code>) and the
+          site logo/wordmark.
+        </li>
+        <li>
+          <span class="font-sample font-sample--body">Source Sans 3 (400/600)</span>
+          &mdash; used for body copy, navigation links, and form labels.
+        </li>
+      </ul>
+    </section>
+
+    <section id="wireframes" aria-labelledby="wireframes-heading">
+      <h2 id="wireframes-heading">Wireframes</h2>
+      <p>Low-fidelity layout sketches for the home page, mobile and desktop.</p>
+
+      <div class="wireframe-group">
+        <figure class="wireframe">
+          <svg viewBox="0 0 300 600" role="img" aria-labelledby="mobile-wf-title" xmlns="http://www.w3.org/2000/svg">
+            <title id="mobile-wf-title">Mobile home page wireframe</title>
+            <rect x="1" y="1" width="298" height="598" fill="none" stroke="#4A3428" stroke-width="2"/>
+            <rect x="10" y="10" width="280" height="50" fill="#4A3428"/>
+            <text x="150" y="40" text-anchor="middle" fill="#F5EFE6" font-size="14">Logo</text>
+            <rect x="10" y="70" width="280" height="30" fill="#C9713D"/>
+            <text x="150" y="90" text-anchor="middle" fill="#F5EFE6" font-size="12">Hamburger Nav</text>
+            <rect x="10" y="110" width="280" height="150" fill="#6B7C59" opacity="0.5"/>
+            <text x="150" y="190" text-anchor="middle" fill="#4A3428" font-size="12">Hero Image + CTA</text>
+            <rect x="10" y="270" width="280" height="90" fill="none" stroke="#4A3428" stroke-width="1.5"/>
+            <text x="150" y="315" text-anchor="middle" fill="#4A3428" font-size="12">Menu Highlights</text>
+            <rect x="10" y="370" width="280" height="90" fill="none" stroke="#4A3428" stroke-width="1.5"/>
+            <text x="150" y="415" text-anchor="middle" fill="#4A3428" font-size="12">Hours / Location</text>
+            <rect x="10" y="470" width="280" height="70" fill="none" stroke="#4A3428" stroke-width="1.5"/>
+            <text x="150" y="505" text-anchor="middle" fill="#4A3428" font-size="12">Newsletter Signup</text>
+            <rect x="10" y="550" width="280" height="40" fill="#4A3428"/>
+            <text x="150" y="575" text-anchor="middle" fill="#F5EFE6" font-size="12">Footer</text>
+          </svg>
+          <figcaption>Mobile layout (stacked, single column)</figcaption>
+        </figure>
+
+        <figure class="wireframe">
+          <svg viewBox="0 0 800 500" role="img" aria-labelledby="desktop-wf-title" xmlns="http://www.w3.org/2000/svg">
+            <title id="desktop-wf-title">Desktop home page wireframe</title>
+            <rect x="1" y="1" width="798" height="498" fill="none" stroke="#4A3428" stroke-width="2"/>
+            <rect x="10" y="10" width="200" height="40" fill="#4A3428"/>
+            <text x="110" y="35" text-anchor="middle" fill="#F5EFE6" font-size="13">Logo</text>
+            <rect x="220" y="10" width="570" height="40" fill="#C9713D"/>
+            <text x="505" y="35" text-anchor="middle" fill="#F5EFE6" font-size="13">Home | Menu | Events | Contact</text>
+            <rect x="10" y="60" width="780" height="180" fill="#6B7C59" opacity="0.5"/>
+            <text x="400" y="155" text-anchor="middle" fill="#4A3428" font-size="16">Hero Image + Call to Action</text>
+            <rect x="10" y="250" width="250" height="140" fill="none" stroke="#4A3428" stroke-width="1.5"/>
+            <text x="135" y="325" text-anchor="middle" fill="#4A3428" font-size="12">Menu Highlights</text>
+            <rect x="270" y="250" width="250" height="140" fill="none" stroke="#4A3428" stroke-width="1.5"/>
+            <text x="395" y="325" text-anchor="middle" fill="#4A3428" font-size="12">Hours / Location</text>
+            <rect x="530" y="250" width="260" height="140" fill="none" stroke="#4A3428" stroke-width="1.5"/>
+            <text x="660" y="325" text-anchor="middle" fill="#4A3428" font-size="12">Loyalty Signup</text>
+            <rect x="10" y="400" width="780" height="90" fill="#4A3428"/>
+            <text x="400" y="450" text-anchor="middle" fill="#F5EFE6" font-size="13">Footer: Contact | Social | References Link</text>
+          </svg>
+          <figcaption>Desktop layout (three-column content row)</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Riverside Roasters &mdash; WDD 131 Website Planning Document</p>
+  </footer>
+</body>
+</html>
