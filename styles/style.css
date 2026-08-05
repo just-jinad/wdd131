@@ -11,9 +11,9 @@
   --error: #b0402f;
   --muted: #6b6558;
 
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body: "Inter", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
 
   --radius: 4px;
   --shadow-card: 0 1px 2px rgba(28, 35, 33, 0.06), 0 8px 24px rgba(28, 35, 33, 0.08);
@@ -55,7 +55,7 @@ body {
   font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--brass);
+  color: var(--card);
   margin: 0 0 0.5rem;
 }
 
@@ -362,7 +362,7 @@ select:invalid {
 }
 
 .timestamp {
-  color: var(--muted);
+  color: var(--paper);
 }
 
 /* =========================================================

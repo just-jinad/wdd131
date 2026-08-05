@@ -6,9 +6,6 @@
   <title>Product Review — Submit</title>
   <meta name="description" content="Submit a product review: rating, installation date, useful features, and written feedback." >
   <meta name="author" content="Tope Jinad">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
@@ -20,7 +17,7 @@
   </header>
 
   <main class="page">
-    <form class="ticket" action="review.html" method="get" novalidate>
+    <form class="ticket" action="review.html" method="get">
 
       <!-- Product Name -->
       <div class="field">
@@ -102,6 +99,6 @@
     <p class="timestamp">Last Modified: <span id="lastModified"></span></p>
   </footer>
 
-  <script src="scripts/products.js"></script>
+  <script src="scripts/products.js" defer></script>
 </body>
 </html>
